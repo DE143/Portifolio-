@@ -7,6 +7,7 @@ using System.Text;
 using PortfolioAPI.Ifrastacture.DataBase;
 using PortfolioAPI.Implimentation.Interfaces;
 using PortfolioAPI.Implimentation.Services;
+using PortfolioAPI.Implimentation.Skills;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +29,8 @@ builder.Services.AddScoped<IEducationService, EducationService>();
 builder.Services.AddScoped<IExperianceService, ExperianceService>();
 builder.Services.AddScoped<IHeroService, HeroService>();
 builder.Services.AddScoped<IPortifolioService, PortifolioService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<ISkillService, SkillService>();
 // Add Identity
 builder.Services
     .AddIdentity<ApplicationUser, IdentityRole>()

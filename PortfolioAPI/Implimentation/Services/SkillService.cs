@@ -1,69 +1,66 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PortfolioAPI.Ifrastacture.DataBase;
-using PortfolioAPI.Ifrastacture.Models;
 using PortfolioAPI.Implimentation.Interfaces;
 using PortfolioAPI.Infrastacture.DTOs;
-
-namespace PortfolioAPI.Implimentation.Services
+namespace PortfolioAPI.Implimentation.Skills
 {
-    public class ServiceService:IServiceService
+    public class SkillService:ISkillService
     {
         private readonly ContentDataContext _contentDataContext;
-        public ServiceService(ContentDataContext contentDataContext)
-        {
-            _contentDataContext = contentDataContext;
+        public SkillService(ContentDataContext contentDataContext) {
+            _contentDataContext = contentDataContext;       
         }
 
-        public async Task<ResponseData<Guid>> AddService(ServiceDto serviceDto)
+        public async Task<ResponseData<Guid>> AddSkill(SkillDto skillDto)
         {
             try
             {
-                if (serviceDto == null)
+                if (skillDto == null)
                 {
-                  return new ResponseData<Guid>
+                    return new ResponseData<Guid>
                     {
                         IsSuccess = true,
                         Message = "Successfully Updated",
                     };
                 }
-                var data = new Ifrastacture.Models.Services
+                var data = new Ifrastacture.Models.Skills
                 {
-                    Id=Guid.NewGuid(),
-                    Title=serviceDto.Title,
-                    Icon=serviceDto.Icon,
-                    Description=serviceDto.Description,
-                    IsActive=true,
-                    Status="Not Approved"
+                    Id = Guid.NewGuid(),
+                    LanguageName = skillDto.LanguageName,
+                    Percent = skillDto.Percent,
+                    IsActive = true,
+                    Status = "Not Approved"
 
                 };
-                await _contentDataContext.services.AddAsync(data);
+                await _contentDataContext.skills.AddAsync(data);
                 await _contentDataContext.SaveChangesAsync();
-              return  new ResponseData<Guid>
+                return new ResponseData<Guid>
                 {
                     IsSuccess = true,
                     Message = "Successfully Added",
-                     data = data.Id
+                    data = data.Id
                 };
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-             return  new ResponseData<Guid>
+                return new ResponseData<Guid>
                 {
                     IsSuccess = false,
-                    Message =ex.Message,
+                    Message = ex.Message,
                     // data = getData.Id
                 };
             }
         }
 
-        public async Task<ResponseData<ServiceDto>> ApproveService(Guid id)
+        public async Task<ResponseData<SkillDto>> ApproveSkill(Guid id)
         {
 
             try
             {
-                var getData = await _contentDataContext.services.Where(x => x.Id == id && x.IsActive == true).FirstOrDefaultAsync();
+                var getData = await _contentDataContext.skills.Where(x => x.Id == id && x.IsActive == true).FirstOrDefaultAsync();
                 if (getData == null)
                 {
-                    return new ResponseData<ServiceDto>
+                    return new ResponseData<SkillDto>
                     {
                         IsSuccess = false,
                         Message = "There Is Not Data"
@@ -72,7 +69,7 @@ namespace PortfolioAPI.Implimentation.Services
 
                 getData.Status = "Approved";
                 await _contentDataContext.SaveChangesAsync();
-                return new ResponseData<ServiceDto>
+                return new ResponseData<SkillDto>
                 {
                     IsSuccess = true,
                     Message = "Successfully Approved",
@@ -81,7 +78,7 @@ namespace PortfolioAPI.Implimentation.Services
             }
             catch (Exception ex)
             {
-                return new ResponseData<ServiceDto>
+                return new ResponseData<SkillDto>
                 {
                     IsSuccess = false,
                     Message = ex.Message,
@@ -91,12 +88,12 @@ namespace PortfolioAPI.Implimentation.Services
 
         }
 
-        public async Task<ResponseData> DeleteService(Guid id)
+        public async Task<ResponseData> DeleteSkill(Guid id)
         {
 
             try
             {
-                var getData = await _contentDataContext.services.Where(x => x.Id == id && x.IsActive == true).FirstOrDefaultAsync();
+                var getData = await _contentDataContext.skills.Where(x => x.Id == id && x.IsActive == true).FirstOrDefaultAsync();
                 if (getData == null)
                 {
                     return new ResponseData
@@ -106,12 +103,12 @@ namespace PortfolioAPI.Implimentation.Services
                     };
                 }
 
-                getData.IsActive =false;
+                getData.IsActive = false;
                 await _contentDataContext.SaveChangesAsync();
                 return new ResponseData
                 {
                     IsSuccess = true,
-                    Message = "Successfully Updated",
+                    Message = "Successfully Deleted",
                     // data = getData.Id
                 };
             }
@@ -127,28 +124,29 @@ namespace PortfolioAPI.Implimentation.Services
 
         }
 
-        public async Task<ResponseData<List<ServiceDto>>> GetAllApprovedServices()
+        public async Task<ResponseData<List<SkillDto>>> GetAllApprovedSkills()
         {
 
             try
             {
-                var getData = await _contentDataContext.services.Where(x => x.Status == "Approved" && x.IsActive == true).Select(x => new ServiceDto
+                var getData = await _contentDataContext.skills.Where(x => x.Status == "Approved" && x.IsActive == true).Select(x => new SkillDto
                 {
                     Id = x.Id,
-                    Title = x.Title,
-                    Icon = x.Icon,
-                    Description = x.Description,
+                    LanguageName = x.LanguageName,
+                    Percent = x.Percent,
+                    Status = x.Status,
+                    IsActive = x.IsActive,
 
                 }).ToListAsync();
                 if (getData == null)
                 {
-                    return new ResponseData<List<ServiceDto>>
+                    return new ResponseData<List<SkillDto>>
                     {
                         IsSuccess = false,
                         Message = "There Is Not Data"
                     };
                 }
-                return new ResponseData<List<ServiceDto>>
+                return new ResponseData<List<SkillDto>>
                 {
                     IsSuccess = true,
                     Message = "Successfully Fetched",
@@ -157,7 +155,7 @@ namespace PortfolioAPI.Implimentation.Services
             }
             catch (Exception ex)
             {
-                return new ResponseData<List<ServiceDto>>
+                return new ResponseData<List<SkillDto>>
                 {
                     IsSuccess = false,
                     Message = ex.Message,
@@ -167,28 +165,29 @@ namespace PortfolioAPI.Implimentation.Services
 
         }
 
-        public async Task<ResponseData<List<ServiceDto>>> GetAllServices()
+        public async Task<ResponseData<List<SkillDto>>> GetAllSkills()
         {
 
             try
             {
-                var getData = await _contentDataContext.services.Where(x => x.IsActive == true).Select(x => new ServiceDto
+                var getData = await _contentDataContext.skills.Where(x => x.IsActive == true).Select(x => new SkillDto
                 {
                     Id = x.Id,
-                    Title = x.Title,
-                    Icon = x.Icon,
-                    Description= x.Description,
+                    LanguageName = x.LanguageName,
+                    Percent = x.Percent,
+                    Status = x.Status,
+                    IsActive = x.IsActive,
 
                 }).ToListAsync();
                 if (getData == null)
                 {
-                    return new ResponseData<List<ServiceDto>>
+                    return new ResponseData<List<SkillDto>>
                     {
                         IsSuccess = false,
                         Message = "There Is Not Data"
                     };
                 }
-                return new ResponseData<List<ServiceDto>>
+                return new ResponseData<List<SkillDto>>
                 {
                     IsSuccess = true,
                     Message = "Successfully Fetched",
@@ -197,7 +196,7 @@ namespace PortfolioAPI.Implimentation.Services
             }
             catch (Exception ex)
             {
-                return new ResponseData<List<ServiceDto>>
+                return new ResponseData<List<SkillDto>>
                 {
                     IsSuccess = false,
                     Message = ex.Message,
@@ -207,29 +206,30 @@ namespace PortfolioAPI.Implimentation.Services
 
         }
 
-        public async Task<ResponseData<ServiceDto>> GetServiceById(Guid id)
+        public async Task<ResponseData<SkillDto>> GetSkillById(Guid id)
         {
 
 
             try
             {
-                var getData = await _contentDataContext.services.Where(x => x.Id == id && x.IsActive == true).Select(x => new ServiceDto
+                var getData = await _contentDataContext.skills.Where(x => x.Id == id && x.IsActive == true).Select(x => new SkillDto
                 {
                     Id = x.Id,
-                    Title = x.Title,
-                    Icon = x.Icon,
-                    Description = x.Description,
+                    LanguageName = x.LanguageName,
+                    Percent = x.Percent,
+                    Status = x.Status,
+                    IsActive= x.IsActive,
 
                 }).FirstOrDefaultAsync();
                 if (getData == null)
                 {
-                    return new ResponseData<ServiceDto>
+                    return new ResponseData<SkillDto>
                     {
                         IsSuccess = false,
                         Message = "There Is Not Data"
                     };
                 }
-                return new ResponseData<ServiceDto>
+                return new ResponseData<SkillDto>
                 {
                     IsSuccess = true,
                     Message = "Successfully Fetched",
@@ -238,7 +238,7 @@ namespace PortfolioAPI.Implimentation.Services
             }
             catch (Exception ex)
             {
-                return new ResponseData<ServiceDto>
+                return new ResponseData<SkillDto>
                 {
                     IsSuccess = false,
                     Message = ex.Message,
@@ -247,18 +247,18 @@ namespace PortfolioAPI.Implimentation.Services
 
         }
 
-        public async Task<ResponseData<Guid>> UpdateService(ServiceDto serviceDto)
+        public async Task<ResponseData<Guid>> UpdateSkill(SkillDto SkillDto)
         {
 
 
             try
             {
-                var getData = await _contentDataContext.services.Where(x => x.Id == serviceDto.Id && x.IsActive == true).Select(x => new ServiceDto
+                var getData = await _contentDataContext.skills.Where(x => x.Id == SkillDto.Id && x.IsActive == true).Select(x => new SkillDto
                 {
                     Id = x.Id,
-                    Title = x.Title,
-                    Icon = x.Icon,
-                    Description = x.Description,
+                    LanguageName = x.LanguageName,
+                    Percent = x.Percent,
+                    Status = x.Status,
 
 
                 }).FirstOrDefaultAsync();
@@ -270,9 +270,8 @@ namespace PortfolioAPI.Implimentation.Services
                         Message = "There Is Not Data"
                     };
                 }
-                getData.Title = serviceDto.Title;
-                getData.Icon = serviceDto.Icon;
-                getData.Description = serviceDto.Description;
+                getData.LanguageName = SkillDto.LanguageName;
+                getData.Percent = SkillDto.Percent;
                 await _contentDataContext.SaveChangesAsync();
                 return new ResponseData<Guid>
                 {
@@ -291,6 +290,7 @@ namespace PortfolioAPI.Implimentation.Services
             }
 
         }
+
 
     }
 }
