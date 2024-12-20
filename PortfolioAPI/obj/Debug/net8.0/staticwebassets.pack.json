@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\AboutUs\\5b63970a-3a56-46da-b151-19594b454214.jpg",
+      "PackagePath": "staticwebassets\\AboutUs\\5b63970a-3a56-46da-b151-19594b454214.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\AboutUs\\9b943e20-3bfb-461e-8e01-ed174387d3b4.jpg",
+      "PackagePath": "staticwebassets\\AboutUs\\9b943e20-3bfb-461e-8e01-ed174387d3b4.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Blogs\\f805fddb-7d9c-43df-9a28-6963a61eca72.jpg",
+      "PackagePath": "staticwebassets\\Blogs\\f805fddb-7d9c-43df-9a28-6963a61eca72.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Hero\\Photos\\3142d544-0f44-41b2-af3f-2488405ca552.jpg",
+      "PackagePath": "staticwebassets\\Hero\\Photos\\3142d544-0f44-41b2-af3f-2488405ca552.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Hero\\Photos\\9a9ade59-b924-4a5a-9aa2-30956bcbd0c5.jpg",
+      "PackagePath": "staticwebassets\\Hero\\Photos\\9a9ade59-b924-4a5a-9aa2-30956bcbd0c5.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Hero\\Videos\\015a973f-1d20-40d8-ad3c-f67a450c9698.jpg",
+      "PackagePath": "staticwebassets\\Hero\\Videos\\015a973f-1d20-40d8-ad3c-f67a450c9698.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Hero\\Videos\\1bac02d2-3859-4e0f-83f4-b0364b982178.jpg",
+      "PackagePath": "staticwebassets\\Hero\\Videos\\1bac02d2-3859-4e0f-83f4-b0364b982178.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Photos\\1ee1fc37-79e7-40a6-a2c1-ab74f7f4a5a2.jpg",
+      "PackagePath": "staticwebassets\\Photos\\1ee1fc37-79e7-40a6-a2c1-ab74f7f4a5a2.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Photos\\851e739b-e1fb-4e5c-96fa-39a22f843914.jpg",
+      "PackagePath": "staticwebassets\\Photos\\851e739b-e1fb-4e5c-96fa-39a22f843914.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Photos\\b8939ab8-a3be-461a-bafc-4582fd912df7.jpg",
+      "PackagePath": "staticwebassets\\Photos\\b8939ab8-a3be-461a-bafc-4582fd912df7.jpg"
+    },
+    {
+      "Id": "F:\\PortfolioAPI\\wwwroot\\Videos\\a9e29957-fc94-4d53-b054-c71b5bec57d3.jpg",
+      "PackagePath": "staticwebassets\\Videos\\a9e29957-fc94-4d53-b054-c71b5bec57d3.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PortfolioAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PortfolioAPI.props",
+      "PackagePath": "build\\PortfolioAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PortfolioAPI.props",
+      "PackagePath": "buildMultiTargeting\\PortfolioAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PortfolioAPI.props",
+      "PackagePath": "buildTransitive\\PortfolioAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
