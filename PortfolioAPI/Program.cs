@@ -8,6 +8,7 @@ using PortfolioAPI.Ifrastacture.DataBase;
 using PortfolioAPI.Implimentation.Interfaces;
 using PortfolioAPI.Implimentation.Services;
 using PortfolioAPI.Implimentation.Skills;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -82,8 +83,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot")),
+    RequestPath = new PathString("/wwwroot")
+});
 
 app.UseAuthorization();
 app.UseCors(builder =>

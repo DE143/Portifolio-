@@ -33,8 +33,7 @@ namespace PortfolioAPI.Implimentation.Services
                     Email=contactUsGetDto.Email,
                     FullName=contactUsGetDto.FullName,
                     Message=contactUsGetDto.Message,
-                    Subject=contactUsGetDto.Subject,
-                    IsActive=contactUsGetDto.IsActive
+                    Subject=contactUsGetDto.Subject
                 };
                 await _contentDataContext.contactUs.AddAsync(addData);
                 await _contentDataContext.SaveChangesAsync();
@@ -52,21 +51,25 @@ namespace PortfolioAPI.Implimentation.Services
             }
         }
 
-        public async Task<ResponseData<Guid>> DeleteContactUs(Guid Id)
+        public async Task<ResponseData<Guid>> DeleteContactUs(Guid id)
         {
             try
             {
-                var getData = await _contentDataContext.contactUs.Where(x => x.Id == Id && x.IsActive == true).FirstOrDefaultAsync();
+                // Fetch the record
+                var contactUs = await _contentDataContext.contactUs
+                    .SingleOrDefaultAsync(x => x.Id == id);
 
-                if (getData == null)
+                if (contactUs == null)
                 {
                     return new ResponseData<Guid>
                     {
                         IsSuccess = false,
-                        Message = " Data Not Found"
+                        Message = "Data Not Found"
                     };
                 }
-                getData.IsActive = false;
+
+                 _contentDataContext.contactUs.Remove(contactUs);
+                // Save changes to the database
                 await _contentDataContext.SaveChangesAsync();
 
                 return new ResponseData<Guid>
@@ -74,7 +77,8 @@ namespace PortfolioAPI.Implimentation.Services
                     IsSuccess = true,
                     Message = "Successfully Deleted"
                 };
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return ExceptionHandler.HandleException<Guid>(ex);
             }
@@ -84,14 +88,13 @@ namespace PortfolioAPI.Implimentation.Services
         {
             try
             {
-                var allData = await _contentDataContext.contactUs.Where(x => x.IsActive == true).Select(x => new ContactUsGetDto
+                var allData = await _contentDataContext.contactUs.Select(x => new ContactUsGetDto
                 {
                     Id=x.Id,
                     FullName=x.FullName,
                     Email=x.Email,
                     Message=x.Message,
-                    Subject=x.Subject,
-                    IsActive=x.IsActive
+                    Subject=x.Subject
                 }).ToListAsync();
                 if (allData == null)
                 {

@@ -25,7 +25,7 @@
         public string FullName { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
-        public string PhotoUrl { get; set; }
+        public string? PhotoUrl { get; set; }
         public IFormFile Photo { get; set; }
         public string Degree { get; set; }
         public string PhoneNumber { get; set; } = string.Empty;
@@ -34,8 +34,8 @@
         public string BirthDay { get; set; }
         public string Experiance { get; set; }
         public string Freelance { get; set; }
-        public string Status { get; set; }
-        public bool IsActive { get; set; }
+        public string? Status { get; set; }
+        public bool? IsActive { get; set; }
 
     }
     public class UpdateAboutUsDto

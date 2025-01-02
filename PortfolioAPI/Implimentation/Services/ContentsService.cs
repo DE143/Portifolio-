@@ -170,7 +170,7 @@ namespace PortfolioAPI.Implimentation.Services
         {
             try
             {
-                var allData= await _contentDataContext.abouts.Select(x=> new AboutUsDto
+                var allData= await _contentDataContext.abouts.Where(x=>x.IsActive==true).Select(x=> new AboutUsDto
                 {
                     Id=x.Id,
                     FullName=x.FullName,
