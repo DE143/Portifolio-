@@ -1,0 +1,14 @@
+# Node.js (React)
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# ASP.NET Core
+backend/bin/
+backend/obj/
+backend/appsettings.json
+backend/appsettings.Development.json
+
+# General
+.vscode/
+.DS_Store

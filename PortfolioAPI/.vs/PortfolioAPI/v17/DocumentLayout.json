@@ -1,25 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Portifolio\\PortfolioAPI\\",
+  "WorkspaceRootPath": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|f:\\portifolio\\portfolioapi\\implimentation\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:implimentation\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|a:\\portifolio\\portifolio\\portfolioapi\\infrastacture\\dtos\\portifoliodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:infrastacture\\dtos\\portifoliodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|f:\\portifolio\\portfolioapi\\infrastacture\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:infrastacture\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|a:\\portifolio\\portifolio\\portfolioapi\\controllers\\portifoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:controllers\\portifoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|f:\\portifolio\\portfolioapi\\implimentation\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:implimentation\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|f:\\portifolio\\portfolioapi\\implimentation\\interfaces\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:implimentation\\interfaces\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|f:\\portifolio\\portfolioapi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|a:\\portifolio\\portifolio\\portfolioapi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D2F323D-F77D-42B1-AA27-F51C97ECB6D9}|PortfolioAPI.csproj|solutionrelative:controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,72 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BlogService.cs",
-              "DocumentMoniker": "F:\\Portifolio\\PortfolioAPI\\Implimentation\\Services\\BlogService.cs",
-              "RelativeDocumentMoniker": "Implimentation\\Services\\BlogService.cs",
-              "ToolTip": "F:\\Portifolio\\PortfolioAPI\\Implimentation\\Services\\BlogService.cs",
-              "RelativeToolTip": "Implimentation\\Services\\BlogService.cs",
-              "ViewState": "AQIAAEcAAAAAbmZmZmbmvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:31:24.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServiceService.cs",
-              "DocumentMoniker": "F:\\Portifolio\\PortfolioAPI\\Implimentation\\Services\\ServiceService.cs",
-              "RelativeDocumentMoniker": "Implimentation\\Services\\ServiceService.cs",
-              "ToolTip": "F:\\Portifolio\\PortfolioAPI\\Implimentation\\Services\\ServiceService.cs",
-              "RelativeToolTip": "Implimentation\\Services\\ServiceService.cs",
-              "ViewState": "AQIAAA8AAADQmpmZmZknwIsAAAAAAAAA",
+              "Title": "PortifolioDto.cs",
+              "DocumentMoniker": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\Infrastacture\\DTOs\\PortifolioDto.cs",
+              "RelativeDocumentMoniker": "Infrastacture\\DTOs\\PortifolioDto.cs",
+              "ToolTip": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\Infrastacture\\DTOs\\PortifolioDto.cs",
+              "RelativeToolTip": "Infrastacture\\DTOs\\PortifolioDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:04:51.775Z",
+              "WhenOpened": "2025-01-01T19:55:21.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IServiceService.cs",
-              "DocumentMoniker": "F:\\Portifolio\\PortfolioAPI\\Implimentation\\Interfaces\\IServiceService.cs",
-              "RelativeDocumentMoniker": "Implimentation\\Interfaces\\IServiceService.cs",
-              "ToolTip": "F:\\Portifolio\\PortfolioAPI\\Implimentation\\Interfaces\\IServiceService.cs",
-              "RelativeToolTip": "Implimentation\\Interfaces\\IServiceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:04:29.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ServiceController.cs",
-              "DocumentMoniker": "F:\\Portifolio\\PortfolioAPI\\Controllers\\ServiceController.cs",
+              "DocumentMoniker": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "Controllers\\ServiceController.cs",
-              "ToolTip": "F:\\Portifolio\\PortfolioAPI\\Controllers\\ServiceController.cs",
+              "ToolTip": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\Controllers\\ServiceController.cs",
               "RelativeToolTip": "Controllers\\ServiceController.cs",
-              "ViewState": "AQIAAA4AAACUmZmZmRk3wGsAAABMAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:03:59.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T19:54:23.265Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServiceDto.cs",
-              "DocumentMoniker": "F:\\Portifolio\\PortfolioAPI\\Infrastacture\\DTOs\\ServiceDto.cs",
-              "RelativeDocumentMoniker": "Infrastacture\\DTOs\\ServiceDto.cs",
-              "ToolTip": "F:\\Portifolio\\PortfolioAPI\\Infrastacture\\DTOs\\ServiceDto.cs",
-              "RelativeToolTip": "Infrastacture\\DTOs\\ServiceDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "PortifolioController.cs",
+              "DocumentMoniker": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\Controllers\\PortifolioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PortifolioController.cs",
+              "ToolTip": "A:\\Portifolio\\Portifolio\\PortfolioAPI\\Controllers\\PortifolioController.cs",
+              "RelativeToolTip": "Controllers\\PortifolioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:02:40.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T19:54:01.872Z"
             }
           ]
         }
